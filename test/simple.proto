@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package grpcauth.test;
+
+option go_package = "github.com/dosquad/go-grpcauth/test";
+
+service Test {
+    rpc TestOffline(EmptyRequest) returns (Response);
+    rpc TestOnline(EmptyRequest) returns (Response);
+}
+
+message EmptyRequest {
+}
+
+message Response {
+    string user = 1;
+    bool online = 2;
+}
