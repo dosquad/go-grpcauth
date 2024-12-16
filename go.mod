@@ -3,7 +3,7 @@ module github.com/dosquad/go-grpcauth
 go 1.23.1
 
 require (
-	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.1.0
+	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.2.0
 	golang.org/x/net v0.32.0
 	google.golang.org/grpc v1.68.1
 	google.golang.org/protobuf v1.35.2
