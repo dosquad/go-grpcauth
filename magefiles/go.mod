@@ -3,7 +3,7 @@ module github.com/dosquad/go-grpcauth/magefiles
 go 1.22.2
 
 require (
-	github.com/dosquad/mage v0.2.0
+	github.com/dosquad/mage v0.2.1
 	github.com/magefile/mage v1.15.0
 )
 
