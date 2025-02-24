@@ -3,7 +3,7 @@ module github.com/dosquad/go-grpcauth/magefiles
 go 1.22.2
 
 require (
-	github.com/dosquad/mage v0.2.4
+	github.com/dosquad/mage v0.2.5
 	github.com/magefile/mage v1.15.0
 )
 
@@ -21,7 +21,6 @@ require (
 	github.com/na4ma4/go-permbits v0.5.1 // indirect
 	github.com/princjef/mageutil v1.0.0 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
-	github.com/stretchr/testify v1.8.4 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/net v0.35.0 // indirect
 	golang.org/x/sys v0.30.0 // indirect
