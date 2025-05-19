@@ -7,7 +7,7 @@ toolchain go1.24.1
 require (
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.3.2
 	golang.org/x/net v0.40.0
-	google.golang.org/grpc v1.72.0
+	google.golang.org/grpc v1.72.1
 	google.golang.org/protobuf v1.36.6
 )
 
