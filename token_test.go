@@ -41,7 +41,10 @@ func TestToken_Fail_NonTLS(t *testing.T) {
 				t.Error("expected error to be returned, but error returned nil")
 			}
 			if err != nil && !strings.Contains(err.Error(), "credentials require transport level security") {
-				t.Errorf("expected error to contain 'credentials require transport level security', but received '%s'", err.Error())
+				t.Errorf(
+					"expected error to contain 'credentials require transport level security', but received '%s'",
+					err.Error(),
+				)
 			}
 		})
 	}
@@ -110,7 +113,10 @@ func TestToken_TLS(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gsCreds, err := credentials.NewServerTLSFromFile("artifacts/certs/server.pem", "artifacts/certs/server-key.pem")
+			gsCreds, err := credentials.NewServerTLSFromFile(
+				"artifacts/certs/server.pem",
+				"artifacts/certs/server-key.pem",
+			)
 			if err != nil {
 				t.Errorf("expected error to be nil, returned '%v'", err)
 			}
@@ -150,7 +156,10 @@ func TestToken_ExpectedFailures(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gsCreds, err := credentials.NewServerTLSFromFile("artifacts/certs/server.pem", "artifacts/certs/server-key.pem")
+			gsCreds, err := credentials.NewServerTLSFromFile(
+				"artifacts/certs/server.pem",
+				"artifacts/certs/server-key.pem",
+			)
 			if err != nil {
 				t.Errorf("expected error to be nil, returned '%v'", err)
 			}

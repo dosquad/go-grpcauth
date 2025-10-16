@@ -28,7 +28,10 @@ func TestBasic_Fail_NonTLS(t *testing.T) {
 		t.Error("expected error to be returned, but error returned nil")
 	}
 	if !strings.Contains(err.Error(), "credentials require transport level security") {
-		t.Errorf("expected error to contain 'credentials require transport level security' but returned '%s'", err.Error())
+		t.Errorf(
+			"expected error to contain 'credentials require transport level security' but returned '%s'",
+			err.Error(),
+		)
 	}
 }
 
@@ -127,7 +130,10 @@ func TestBasic_Fail_TLS_InvalidInput(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gsCreds, err := credentials.NewServerTLSFromFile("artifacts/certs/server.pem", "artifacts/certs/server-key.pem")
+			gsCreds, err := credentials.NewServerTLSFromFile(
+				"artifacts/certs/server.pem",
+				"artifacts/certs/server-key.pem",
+			)
 			if err != nil {
 				t.Errorf("expected error to be nil, returned '%v'", err)
 			}
